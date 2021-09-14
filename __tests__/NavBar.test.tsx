@@ -13,8 +13,6 @@ describe('Navigation by Link', () => {
         })
         render(page)
 
-        userEvent.click(screen.getByTestId('blog-nav'))
-        expect(await screen.findByText('blog page')).toBeInTheDocument()
         userEvent.click(screen.getByTestId('comment-nav'))
         expect(await screen.findByText('comment page')).toBeInTheDocument()
         userEvent.click(screen.getByTestId('context-nav'))

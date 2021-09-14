@@ -5,7 +5,7 @@ import { GetStaticProps } from 'next'
 import { POST } from '../types/Types'
 
 interface STATICPROPS {
-    posts: POST[]
+  posts: POST[]
 }
 
 const BlogPage: React.FC<STATICPROPS> = ({ posts }) => {
@@ -16,12 +16,11 @@ const BlogPage: React.FC<STATICPROPS> = ({ posts }) => {
     </Layout>
   )
 }
-
-export default BlogPage;
+export default BlogPage
 
 export const getStaticProps: GetStaticProps = async () => {
-    const posts = await getAllPostsData()
-    return {
-      props: { posts },
-    }
+  const posts = await getAllPostsData()
+  return {
+    props: { posts },
+  }
 }
